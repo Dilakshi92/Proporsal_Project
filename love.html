@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>திஸன் ❤️ என்றும் உன்னோடு</title>
+    <style>
+        /* ========== Premium, Soft, Romantic Redesign ========= */
+        /* nee sonna maari "koncham designaa impress pannura mathiri" ✨ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px 10px;
+            font-family: 'Segoe UI', 'Poppins', 'Arial', sans-serif;
+            text-align: center;
+            transition: background 0.6s ease, color 0.4s;
+            background: radial-gradient(circle at 10% 30%, #ff9a9e, #fad0c4, #fad0c4);
+            background-size: 200% 200%;
+            animation: gradientWave 14s infinite alternate;
+            color: #2d1e1e;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientWave {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        body.night {
+            background: radial-gradient(circle at 20% 30%, #1a1e2c, #10131e, #0b0d17);
+            animation: none;
+            color: #ffe2d4;
+        }
+
+        /* Glassmorphism container - miral ah irukum ✨ */
+        .container {
+            margin: 0 auto;
+            max-width: 750px;
+            padding: 30px 25px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 65px 25px 65px 25px;
+            border: 2px solid rgba(255, 245, 245, 0.6);
+            box-shadow: 0 25px 50px -8px rgba(0, 0, 0, 0.25);
+            transition: 0.5s;
+        }
+
+        body.night .container {
+            background: rgba(15, 20, 30, 0.6);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(220, 210, 255, 0.25);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 10px rgba(255, 80, 120, 0.5);
+            letter-spacing: 1.5px;
+            color: #fff5f7;
+        }
+
+        body.night h1 {
+            text-shadow: 0 0 15px #bb9eff;
+            color: #ffeaf1;
+        }
+
+        .sub-name {
+            font-size: 32px;
+            font-weight: 700;
+            background: rgba(255,215,215,0.3);
+            display: inline-block;
+            padding: 8px 30px;
+            border-radius: 70px;
+            backdrop-filter: blur(4px);
+            border: 2px solid white;
+            margin-bottom: 20px;
+            color: #67001b;
+            box-shadow: 0 6px 0 rgba(0,0,0,0.1);
+        }
+
+        body.night .sub-name {
+            background: rgba(50, 50, 80, 0.6);
+            border-color: #cfaaff;
+            color: #ffd9e6;
+        }
+
+        /* ======= VIDEO PLAYER - premium card ======= */
+        #videoBox {
+            margin: 30px auto;
+            width: 100%;
+            max-width: 480px;
+            height: 500px;
+            border-radius: 40px;
+            overflow: hidden;
+            display: none;
+            box-shadow: 0 20px 40px rgba(90, 20, 40, 0.4);
+            border: 5px solid rgba(255, 220, 240, 0.8);
+            transition: 0.4s ease;
+            background: #000;
+        }
+
+        #videoBox video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 35px;
+            object-fit: cover;
+            aspect-ratio: 16/9;
+            background: #0a0a0a;
+            cursor: pointer;
+        }
+
+        body.night #videoBox {
+            border: 5px solid #6d597a;
+            box-shadow: 0 0 30px #a47c9e;
+        }
+
+        /* ======= BUTTONS - super stylish ======= */
+        .glass-btn {
+            padding: 16px 36px;
+            font-size: 20px;
+            border: none;
+            border-radius: 60px;
+            margin: 15px 12px;
+            cursor: pointer;
+            transition: 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            border: 2px solid rgba(255,255,255,0.8);
+            box-shadow: 0 10px 0 rgba(0, 0, 0, 0.15);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .main-btn {
+            background: #ffddee;
+            color: #b3204a;
+            border-color: #ffb6c1;
+            box-shadow: 0 12px 0 #a14a5e, 0 15px 25px #ff99aa;
+        }
+
+        .main-btn:hover {
+            transform: scale(1.08) translateY(-5px);
+            box-shadow: 0 15px 0 #732b3a, 0 20px 30px #ff6f7e;
+            background: #ffeef4;
+        }
+
+        .toggle-btn {
+            background: #1f283b;
+            color: #fbeaff;
+            border-color: #9ca3c0;
+            box-shadow: 0 12px 0 #0e141f;
+        }
+
+        .toggle-btn:hover {
+            background: #2e3c5a;
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 14px 0 #0b101a;
+        }
+
+        /* Message area - extra romantic polish */
+        #message {
+            font-size: 23px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            background: rgba(255, 225, 235, 0.7);
+            backdrop-filter: blur(12px);
+            padding: 28px 18px;
+            border-radius: 80px 20px 80px 20px;
+            border: 3px dashed rgba(255, 110, 140, 0.6);
+            color: #2e1a24;
+            font-weight: 550;
+            line-height: 1.7;
+            box-shadow: inset 0 0 25px rgba(255, 200, 210, 0.5);
+            text-shadow: 0 1px 2px white;
+        }
+
+        body.night #message {
+            background: rgba(20, 25, 45, 0.8);
+            border: 3px dashed #bd9fd0;
+            color: #ffdede;
+            box-shadow: inset 0 0 25px #262c44;
+            text-shadow: none;
+        }
+
+        /* Heart rain - overload cuteness */
+        .heart {
+            position: fixed;
+            color: #ff3366;
+            animation: floatUp 5.5s linear infinite;
+            z-index: 9999;
+            filter: drop-shadow(0 0 12px rgba(255, 80, 120, 0.9));
+            user-select: none;
+            pointer-events: none;
+            top: 110vh; /* start from below */
+            opacity: 0.9;
+            transform: rotate(10deg);
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.9; }
+            100% { transform: translateY(-1200px) rotate(360deg); opacity: 0; }
+        }
+
+        /* Popup - super elegant 💍 */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 240, 245, 0.97);
+            backdrop-filter: blur(18px);
+            color: #2d0e1a;
+            padding: 40px 35px;
+            border-radius: 100px 40px 100px 40px;
+            display: none;
+            box-shadow: 0 40px 70px rgba(150, 0, 50, 0.4);
+            z-index: 10000;
+            border: 5px solid #ffa5b0;
+            width: 400px;
+            max-width: 90%;
+            animation: popWow 0.4s;
+        }
+
+        @keyframes popWow {
+            0% { scale: 0.5; opacity: 0; }
+            100% { scale: 1; opacity: 1; }
+        }
+
+        .popup h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: #aa2e4a;
+            font-weight: 800;
+            text-shadow: 1px 1px 0 white;
+        }
+
+        .popup button {
+            background: #ff4b6e;
+            color: white;
+            border: none;
+            padding: 16px 50px;
+            font-size: 26px;
+            border-radius: 70px;
+            font-weight: bold;
+            box-shadow: 0 14px 0 #992838;
+            transition: 0.2s;
+            border: 2px solid white;
+            letter-spacing: 3px;
+        }
+
+        .popup button:hover {
+            background: #ff1f4a;
+            transform: translateY(-8px);
+            box-shadow: 0 18px 0 #6d1d2d;
+        }
+
+        /* hint - music style */
+        .video-hint {
+            margin-top: 12px;
+            font-size: 18px;
+            background: rgba(0,0,0,0.2);
+            padding: 8px 18px;
+            border-radius: 60px;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+            color: white;
+            font-weight: 600;
+        }
+
+        body.night .video-hint {
+            background: rgba(255,220,240,0.2);
+            color: #ffcfcf;
+        }
+
+        /* responsive */
+        @media (max-width: 550px) {
+            h1 { font-size: 36px; }
+            .sub-name { font-size: 26px; }
+            .glass-btn { padding: 12px 22px; font-size: 17px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>💗 Happy Valentine's Day 💗</h1>
+    <div class="sub-name">❤️ THISAN ❤️</div>
+
+    <!-- VIDEO PLAYER: click panna work aaganum, nee ketta maari video autoplay + controls -->
+    <div id="videoBox">
+        <video id="loveVideo" controls playsinline webkit-playsinline>
+
+            <source src="video.mp4" type="video/mp4">
+            <!-- fallback romantic clip from source (sample) -->
+            <source src="love.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br/>
+
+
+    <!-- BUTTONS - design aa thaa iruku ✨ -->
+    <button class="glass-btn main-btn" onclick="showLove()">💌 Click My Love</button>
+    <button class="glass-btn toggle-btn" onclick="toggleNight()">🌙 Night</button>
+
+    <!-- MESSAGE AREA - romba special ah varum -->
+    <p id="message">💕 Hi daa Thisan, press "Click My Love" Button💕</p>
+</div>
+
+<!-- POPUP PROPOSAL - FOREVER ❤️ -->
+<div class="popup" id="proposalPopup">
+    <h2 style="font-size:28px; margin-top:-10px;">Will You Be Mine Forever?</h2>
+    <button onclick="closePopup()"> ❤️ Yes</button>
+</div>
+
+<script>
+    // ========== VIDEO & LOVE MAGIC ==========
+    // design aa video click panna work aaganum. nee solra maari perfect ah!
+
+    // video element
+    const video = document.getElementById('loveVideo');
+    const videoBox = document.getElementById('videoBox');
+    let heartIntervalId = null;
+
+    // main function — when "Click My Heart" button pressed
+    function showLove() {
+        // 1. show video container with smooth effect
+        videoBox.style.display = 'block';
+        
+        // 2. PLAY VIDEO — nee ketta maari "video click panna work pannanum"
+        //    try-catch with promise
+        let playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                console.log("video played successfully ❤️");
+            }).catch(error => {
+                console.log("auto-play prevented, user must tap video");
+                // but we still show video — user can click play manually
+                // namma hint um iruku
+            });
+        }
+
+        // 3. ROMANTIC MESSAGE — unga lines with THISAN
+        document.getElementById("message").innerHTML =
+           "<span style='font-size:30px;'>✨ June 14, 2025 ✨</span><br><br>" +
+
+"நீ எனக்கு கிடைத்தது காதல் அல்ல…,<br>" +
+"என் வாழ்க்கை முழுவதும் கடவுள் கொடுத்த ஒரு வரம் நீ.,<br>" +
+"என் சோர்வான நாள்களை மகிழ்ச்சியாக்க வந்த ஒரே இதயம் நீ,<br>" +
+"என் மௌனங்களுக்கும் அர்த்தம் தந்த என் கனவு நீ. 💖❤️<br><br>" +
+
+"உலகத்தில் எது மாறினாலும் எனக்கு கவலை இல்லை…,<br>" +
+" என் உலகமாக நீ மட்டும் இருந்தால் அது போதும். ❤️💞<br><br>" +
+
+"Today may be Valentine's Day,<br>" +
+"but உன்னை காதலிப்பதை<br>" +
+"நான் ஒவ்வொரு நாளும் கொண்டாடுகிறேன் 💖💖<br><br>" +
+
+"<strong style='font-size:32px;'>love you daa 😘, THISAN</strong><br>" +
+"today, tomorrow, and forever. ❤️"; 
+
+        // 4. HEART RAIN — start beautiful hearts
+        createHearts();
+
+        // 5. POPUP after 5 seconds (proposal)
+        setTimeout(() => {
+            let pop = document.getElementById("proposalPopup");
+            pop.style.display = "block";
+            // extra hearts when popup
+            for (let i=0;i<12;i++) createSingleHeart();
+        }, 5000);
+    }
+
+    // ========== HEART GENERATOR ==========
+    function createHearts() {
+        if (heartIntervalId) clearInterval(heartIntervalId);
+        heartIntervalId = setInterval(() => {
+            createSingleHeart();
+        }, 280); // rhythm of love
+    }
+
+    function createSingleHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        // cute heart variations
+        const symbols = ["❤️", "🧡", "💖", "💗", "💘", "💝", "💕", "💞", "💓", "❣️"];
+        heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+        heart.style.left = Math.random() * 100 + "%";
+        heart.style.top = "100vh"; // bottom start
+        heart.style.fontSize = (Math.random() * 25 + 20) + "px";
+        heart.style.animationDuration = (Math.random() * 4 + 4.5) + "s";
+        heart.style.position = "fixed";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5500);
+    }
+
+    // ========== NIGHT MODE ==========
+    function toggleNight() {
+        document.body.classList.toggle("night");
+        const btn = document.querySelector(".toggle-btn");
+        if (document.body.classList.contains("night")) {
+            btn.innerHTML = "☀️ light mood";
+            btn.style.background = "#2a3855";
+        } else {
+            btn.innerHTML = "🌙 dark mood";
+            btn.style.background = "black";
+        }
+    }
+
+    // ========== POPUP CLOSE & FOREVER ALERT ==========
+    function closePopup() {
+        document.getElementById("proposalPopup").style.display = "none";
+        alert("❤️ Forever with you THISAN ❤️ ");
+        // extra heart burst
+        for (let i = 0; i < 25; i++) {
+            setTimeout(createSingleHeart, i * 20);
+        }
+    }
+
+    // ========== extra: video click panna work aaganum. if user clicks video, we also play ========
+    // video add event listener - if paused, play it
+    video.addEventListener('click', function() {
+        if (video.paused) {
+            video.play().catch(e => console.log("user interaction needed"));
+        } else {
+            video.pause(); // toggle option - up to user
+        }
+    });
+
+    // ensure when video shows and first time, we tried to play; but if fails, user can click video
+    // also on body click, we don't auto play music (no audio), but we respect video interaction.
+
+    // set default first frame? we can set poster? but not necessary. 
+    // Provide poster attribute for better look (optional)
+    video.setAttribute('poster', 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&h=350&fit=crop');
+    // but that's just preview, real video.mp4 use panninga.
+
+    // Slideshow illa, but neenga video use pannathunaala video player design aa thaa.
+    // "ennum koncham design aa thaa" — we added premium glass, big buttons, soft gradients.
+
+    // also fix: if video doesn't autoplay because of chrome, user will click video itself.
+    // our main button tries to play programmatically.
+
+    // also set video preload
+    video.preload = 'auto';
+
+
+</script>
+
+<!-- extra design: subtle background hearts? no, we already have heart rain -->
+
+</body>
+</html>
